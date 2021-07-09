@@ -7,28 +7,23 @@
 <div class="container py-sm-3">
     <h3 class="heading mb-sm-5 mb-4 text-center">Add Product</h3>
     
-    <form action="#" method="post">
+    <form [formGroup] = "productForm">
        <div class="row">
             <div class="col-md-6 contact-left">
-                <input type="text" name="productname" placeholder="Product Name" required="">
+                <input type="text"  placeholder="Product Name" required formControlName="productname">
                 <br><br>
-                <label>Product category</label><br>
-                <select id="category" name="category" required=""> 
-                    <option value="volvo">Vegitables</option>
-                    <option value="saab">Traditional Flours</option>
-                    <option value="fiat">Dry Fruits And Nuts</option>
-                    <option value="audi">Herbal</option>
-                  </select>
+                
+                <input type="text" placeholder="prodct category"required formControlName="category">
                   <br><br>
                  
-                <input type="text" name="price" placeholder="Price" required="">
+                <input type="text"  placeholder="Price" required formControlName="price">
                 
                 <br><br>
                 <label>Product Photo</label>
                 <br>
-                <input type="file" name="image" required="">
+                <input type="file" required="" required formControlName="photo" (change)="uploadFile($event)">
                 <br><br>
-                <input type="submit" name ="add" value="ADD">
+               <button type="submit" class="btn btn-primary" (click)="onSubmit()">ADD</button>
                 <br><br>
                 
             </div>

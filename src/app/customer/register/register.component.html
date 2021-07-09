@@ -1,1 +1,33 @@
-<p>register works!</p>
+
+<div class="inner-banner" id="home">
+	<div class="container">
+	</div>
+</div>
+<div class="container py-sm-3">
+    <h3 class="heading mb-sm-5 mb-4 text-center">customer Registration</h3>
+
+    <form [formGroup] ="registerForm">
+       <div class="row">
+            <div class="col-md-6 contact-left">
+                <input type="text" placeholder="Your Name" required formControlName="name">
+                <br><br>
+                <input type="email"  placeholder="Email Address" required formControlName="email">
+                <br><br>
+                <input type="text" placeholder="Phone Number" required formControlName="phone">
+                <br><br>
+                <input type="text" placeholder="Address" required formControlName="address">
+                <br><br>
+                <input type="password"  placeholder="password" required formControlName="password">
+                
+                <br><br>
+                <button  type="submit" class="btn btn-primary" (click)="onSubmit()">Register</button>
+                <br><br>
+                <a routerLink="/login">Already User</a>
+             </div>
+
+        </div>
+    </form> 
+    <!-- map -->
+   
+    <!-- //map -->
+</div>

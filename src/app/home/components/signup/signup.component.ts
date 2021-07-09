@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
     name: ['', Validators.required],
     email: ['', Validators.required],
     phone: ['', Validators.required],
-    location: ['', Validators.required],
+    address: ['', Validators.required],
     adharnumber: ['', Validators.required],
     password: ['', Validators.required],
   });

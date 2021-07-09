@@ -1,1 +1,28 @@
-<p>adminlogin works!</p>
+
+<div class="inner-banner" id="home">
+	<div class="container">
+	</div>
+</div>
+<div class="container py-sm-3">
+    <h3 class="heading mb-sm-5 mb-4 text-center"> Login</h3>
+    
+    <form [formGroup] ="adminloginForm">
+       <div class="row">
+            <div class="col-md-6 contact-left">
+                    <input type="text"  placeholder="Email Address" required  formControlName="username">
+                    <br><br>
+                    <input type="text"  placeholder="password" required  formControlName="password">
+                    <br><br>
+                    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Login</button>
+                <br><br>
+                
+            </div>
+    
+            
+        </div>
+    </form>
+    <!-- map -->
+   
+    <!-- //map -->
+</div>
+

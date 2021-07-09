@@ -1,0 +1,49 @@
+<!-- Carousel wrapper -->
+<div class="inner-banner" id="home">
+	<div class="container">
+	</div>
+</div>
+<div *ngFor="let productList of productList">
+<div
+  id="carouselMultiItemExample"
+  class="carousel slide carousel-dark text-center"
+  data-mdb-ride="carousel"
+>
+  <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    
+  </div>
+  <!-- Inner -->
+  <div class="carousel-inner py-4" >
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+                <div>
+              <img
+                [src]='imgSrc'
+                class="card-img-top"
+                alt="..."
+            />
+              <div class="card-body">
+                <h1 class="card-title">{{productList.productname}}</h1>
+                <p class="card-text">
+                 {{productList.price}}
+                </p>
+                <a href="#!" class="btn btn-primary">BOOK</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  <!-- Inner -->
+</div>
+</div>
+</div>
+<!-- Carousel wrapper -->

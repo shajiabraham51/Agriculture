@@ -1,26 +1,33 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import {  FormsModule, ReactiveFormsModule} from '@angular/forms';
+// import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { SharedService } from '../shared.service';
+import { SharedService } from '../shared.service';
+import { AddtoolsComponent } from './addtools/addtools.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ViewuserreqComponent } from './viewuserreq/viewuserreq.component';
+import { AdminRoutingModule } from './admin-routing.module';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
 
-import { FarmerRoutingModule } from './farmer-routing.module';
-// import { RegisterComponent } from './register/register.component';
-
-import { SignupComponent } from '../home/components/signup/signup.component';
-import { ProductComponent } from '../home/components/product/product.component';
-import { FormsModule } from '@angular/forms';
-import { ViewtoolsComponent } from './viewtools/viewtools.component';
 
 
 @NgModule({
   declarations: [
-    // RegisterComponent,
-    SignupComponent,
-    ProductComponent,
-    ViewtoolsComponent
+    AddtoolsComponent,
+    AdminloginComponent,
+    ViewuserreqComponent,
+    AdminhomeComponent
+  
   ],
   imports: [
     CommonModule,
-    FarmerRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
-  ]
+    AdminRoutingModule,
+  ],
+providers: [SharedService],
 })
-export class FarmerModule { }
+export class AdminModule { }

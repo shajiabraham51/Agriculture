@@ -1,1 +1,35 @@
-<p>addtools works!</p>
+
+
+<div class="inner-banner" id="home">
+	<div class="container">
+	</div>
+</div>
+<div class="container py-sm-3">
+    <h3 class="heading mb-sm-5 mb-4 text-center">Add Product</h3>
+    
+    <form [formGroup] = "addtoolForm">
+       <div class="row">
+            <div class="col-md-6 contact-left">
+                <input type="text"  placeholder="Product Name" required formControlName="toolname">
+                <br><br>
+                
+                <input type="text" placeholder="prodct category"required formControlName="category">
+                  <br><br>
+                 
+                <input type="text"  placeholder="Price" required formControlName="price">
+                
+                <br><br>
+                <label>Product Photo</label>
+                <br>
+                <input type="file" required="" required formControlName="photo" (change)="uploadFile($event)">
+                <br><br>
+               <button type="submit" class="btn btn-primary" (click)="onSubmit()">ADD</button>
+                <br><br>
+                
+            </div>
+        </div>
+    </form>
+    <!-- map -->
+   
+    <!-- //map -->
+</div>

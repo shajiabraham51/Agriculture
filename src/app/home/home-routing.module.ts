@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProductComponent } from './components/product/product.component';
+import { CommonComponent } from './components/common/common.component';
+import { ProductssComponent } from './productss/productss.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,16 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'common',
+    component: CommonComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'productss',
+    component: ProductssComponent,
     pathMatch: 'full'
   }
 
