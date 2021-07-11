@@ -29,6 +29,11 @@ onSubmit(){
       (res:any) => {
         console.log(res);
         if(res.sts == true){
+          const userDetails = {
+            type: 'customer',
+            last_login: new Date()
+          }
+          localStorage.setItem('loggedUserDetails', userDetails);
         this._router.navigateByUrl('/customerhome')
       }
     },

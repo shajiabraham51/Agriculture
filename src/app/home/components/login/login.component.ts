@@ -41,6 +41,11 @@ export class LoginComponent implements OnInit {
       this._login.farmerlogin(this.loginForm.value).subscribe(
         (res:any) => {
           console.log(res);
+          const userDetails = {
+            type: 'farmer',
+            last_login: new Date()
+          }
+          localStorage.setItem('loggedUserDetails', userDetails);
           if(res.sts == true){  
             this._router.navigateByUrl('/signup');
           }

@@ -28,6 +28,11 @@ export class AdminloginComponent implements OnInit {
         (res:any) => {
           console.log(res);
           if(res.sts == true){
+            const userDetails = {
+              type: 'admin',
+              last_login: new Date()
+            }
+            localStorage.setItem('loggedUserDetails', userDetails);
             this._router.navigateByUrl('/addtools')
           }
         },

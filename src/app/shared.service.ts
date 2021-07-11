@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import  {HttpClient} from '@angular/common/http'; 
-import { Observable } from 'rxjs';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -65,7 +65,10 @@ export class SharedService {
  }
  UploadPhoto(data:any){
    return this._http.post(this.APIUrl+'SaveFile/',data);
+ }
 
+ signout() {
+    localStorage.removeItem('loggedUserDetails');
+    return of(true);
  }
 }
- 

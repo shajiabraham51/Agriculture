@@ -4,13 +4,15 @@ import { AddtoolsComponent } from './addtools/addtools.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { ViewuserreqComponent } from './viewuserreq/viewuserreq.component';
+import {AuthGuard} from "../auth-guard/auth-guard";
 
 const routes: Routes = [
 
   {
     path: '',
     component: AdminhomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
 
   {
@@ -22,12 +24,14 @@ const routes: Routes = [
   {
     path: 'addtools',
     component: AddtoolsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
 
   {
     path: 'viewuserreq',
-    component: ViewuserreqComponent
+    component: ViewuserreqComponent,
+    canActivate: [AuthGuard]
   }
 
   ];
