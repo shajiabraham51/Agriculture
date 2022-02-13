@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
             type: 'farmer',
             last_login: new Date()
           }
-          localStorage.setItem('loggedUserDetails', userDetails);
+          localStorage.setItem('loggedUserDetails', userDetails.toString());
           if(res.sts == true){  
             this._router.navigateByUrl('/signup');
           }

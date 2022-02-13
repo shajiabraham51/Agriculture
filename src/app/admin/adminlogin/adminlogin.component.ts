@@ -32,7 +32,7 @@ export class AdminloginComponent implements OnInit {
               type: 'admin',
               last_login: new Date()
             }
-            localStorage.setItem('loggedUserDetails', userDetails);
+            localStorage.setItem('loggedUserDetails', JSON.stringify(userDetails));
             this._router.navigateByUrl('/addtools')
           }
         },

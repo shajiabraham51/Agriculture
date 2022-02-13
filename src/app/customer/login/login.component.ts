@@ -33,7 +33,7 @@ onSubmit(){
             type: 'customer',
             last_login: new Date()
           }
-          localStorage.setItem('loggedUserDetails', userDetails);
+          localStorage.setItem('loggedUserDetails', JSON.stringify(userDetails));
         this._router.navigateByUrl('/customerhome')
       }
     },
